@@ -1,4 +1,4 @@
-# TRABAJO PRÁCTICO N°2 GRUPO (5)
+# TRABAJO PRÁCTICO N°3 GRUPO (5)
 
 ## Integrantes del equipo:
 - [Alfredo Palacios](https://github.com/alfredop37)
