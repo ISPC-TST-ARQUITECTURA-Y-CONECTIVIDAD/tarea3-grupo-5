@@ -3,5 +3,4 @@
 
 # https://wokwi.com/projects/363921933213271041
 
-![Image text](https://github.com/ISPC-TST-ARQUITECTURA-Y-CONECTIVIDAD/tarea3-grupo-5/mqtt-esp32-prototype/dht.jpg)
-
+![image](https://user-images.githubusercontent.com/108839742/236582866-28f0e244-4ebc-424f-9e4e-fd7a17413f73.png)
