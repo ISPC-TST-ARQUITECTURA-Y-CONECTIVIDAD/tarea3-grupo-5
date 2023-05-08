@@ -1,8 +1,8 @@
 
 import network, utime, machine
 
-SSID = 'Fibertel WiFi561'
-SSID_PASSWORD = '0142545707'
+SSID = '**********'
+SSID_PASSWORD = '**************'
 
 def do_connect():
     sta_if = network.WLAN(network.STA_IF)
