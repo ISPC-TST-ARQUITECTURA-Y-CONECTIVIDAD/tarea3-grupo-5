@@ -1,0 +1,46 @@
+#include <DHTesp.h>
+
+#define DHTPIN 18            // Pin digital al que está conectado el sensor DHT22
+#define DHTTYPE DHT22        // Tipo de sensor DHT22
+DHTesp dht;                 // Crear una instancia del objeto DHTesp
+
+int potPin = 34;            // Pin analógico del potenciómetro
+int ledPin = 2;             // Pin digital del LED
+int buttonPin = 4;          // Pin digital del botón
+int potValue = 0;           // Valor del potenciómetro
+bool ledOn = false;         // Estado del LED
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
+  Serial.begin(9600);
+  dht.setup(DHTPIN, DHTesp::DHT22);
+}
+
+void loop() {
+  potValue = analogRead(potPin);         // Leer el valor del potenciómetro
+  int brightness = map(potValue, 0, 4095, 0, 255); // Mapear el valor del potenciómetro a un valor de brillo para el LED
+  if (digitalRead(buttonPin) == LOW) {   // Si el botón está presionado, cambiar el estado del LED
+    ledOn = !ledOn;
+  }
+  if (ledOn) {     // Si el LED está encendido, establecer el brillo del LED
+    analogWrite(ledPin, brightness);
+  } else {         // Si el LED está apagado, apagar el LED
+    analogWrite(ledPin, 0);
+  }
+  delay(10);       // Pequeña pausa para evitar vibraciones en el potenciómetro
+
+  float temperature = dht.getTemperature();   // Leer la temperatura del sensor DHT22
+  float humidity = dht.getHumidity();         // Leer la humedad del sensor DHT22
+  Serial.print("Potenciómetro: ");
+  Serial.print(potValue);
+  Serial.print("\tBrillo LED: ");
+  Serial.print(brightness);
+  Serial.print("\tBotón: ");
+  Serial.print(ledOn ? "ON" : "OFF");
+  Serial.print("\tTemperatura: ");
+  Serial.print(temperature);
+  Serial.print("°C\tHumedad: ");
+  Serial.print(humidity);
+  Serial.println("%");
+}
