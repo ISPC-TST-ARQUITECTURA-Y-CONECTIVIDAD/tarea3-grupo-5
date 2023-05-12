@@ -31,11 +31,10 @@ en *.ppt
 El repositorio se estructura de la siguiente manera:
 - `README.md`: archivo que contiene la descripción del proyecto y la información sobre los integrantes del equipo.
 - `bibliografia`: carpeta que contiene la bibliografía consultada para la realización del trabajo práctico.
-- `Comunicacion_REST`: Carpeta que contiene información acerca de qué es una comunicación REST, para qué se utilizan y ejemplos de su implementación.
-- `Formato_datos_JSON`: Carpeta que contiene información acerca de qué es un formato de datos JSON, para qué se utilizan y ejemplos de su implementación.
-- `Ejemplo_solicitud_pizza_JSON`: Carpeta que contiene un pequeño código JSON que implementa una solicitud de pizza por parte de un cliente.
-- `Implementacion_sensores_Arduino_JSON`: Carpeta que contiene un código JSON para la comunicación entre un sensor de temperatura y humedad con un Arduino Uno, simulando los mismos en Proteus. Se incluyen los campos mínimos necesarios para su implementación.
-
+- `http-protocol-common-requests`: Carpeta que contiene información y ejemplos sobre las peticiones más comunes en el protocolo HTTP, su uso y aplicación.
+- `proteus-sensor-simulation`: Carpeta que incluye los archivos necesarios para la simulación de un sensor de temperatura, una luz con dimer y un botón de encendido y apagado mediante Proteus con ESP32.
+- `mqtt-esp32-prototype`: Carpeta que contiene el código fuente para implementar un prototipo de dispositivo con ESP32 y conectarlo a un Broker mediante el protocolo MQTT. Además, incluye información sobre cómo visualizar y controlar los dispositivos, sensores y/o actuadores desde un Smartphone o Tablet.
+- `dashboard-video-presentation`: Carpeta que contiene los archivos necesarios del dashboard y video de funcionamiento y presentación en formato PowerPoint.
 
 
 
